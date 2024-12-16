@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="chart.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+   
+</head>
+<body>
+
+    <div class="container">
+        <h1>Keranjang</h1>
+
+      
+        <div class="products">
+            <div class="product" data-name="Kecap" data-price="5000">
+                <h3>Kecap Bango</h3>
+                <p>Harga: Rp5.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+           
+            </div>
+            <div class="product" data-name="Garam" data-price="2000">
+                <h3>Garam</h3>
+                <p>Harga: Rp2.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="Minyak" data-price="16000">
+                <h3>Minyak</h3>
+                <p>Harga: Rp16.000/L</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="Tepung" data-price="14000">
+                <h3>Tepung</h3>
+                <p>Harga: Rp14.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="Gula" data-price="17000">
+                <h3>Gula</h3>
+                <p>Harga: Rp17.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="Penghapus" data-price="10000">
+                <h3>Susu Kaleng</h3>
+                <p>Harga: Rp10.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="Beras " data-price="14000">
+                <h3>Beras </h3>
+                <p>Harga: Rp14.000/kg</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="kopi " data-price="8000">
+                <h3>Beras </h3>
+                <p>Harga: Rp8.000/kg</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+        </div>
+
+        
+        <div class="cart">
+            <h2>Keranjang Belanja</h2>
+            <ul id="cart-items">
+                
+            </ul>
+            <p>Total: Rp <span id="total-price">0</span></p>
+            <button id="clear-cart">Kosongkan Keranjang</button>
+            <a href="pesan.html" class="button">Pesan Sekarang</a>
+
+        </div>
+    </div>
+    <script src="chart.js"></script>
+    <button id="chart">
+        <a href="sembako.html"><i class="fas fa-arrow-left fa-2x"></i></a>
+      </button>
+</body>
+</html>

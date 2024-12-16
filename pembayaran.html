@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Pengiriman</title>
+        <link rel="shortcut icon" href="img/warung-removebg-preview (1).png" type="image/x-icon">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            label {
+                font-size: 16px;
+            }
+            select, input {
+                width: 100%; 
+                padding: 8px;
+                margin: 8px 0;
+                font-size: 14px;
+            }
+            .payment-option {
+                margin-bottom: 20px;
+            }
+            .button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .button:hover {
+                background-color: #45a049;
+            }
+            .payment-details {
+                display: none;
+            }
+            body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 2em;
+        }
+        .form-container {
+            background-color: white;
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-group button {
+            padding: 12px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+        .payment-methods {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .payment-method {
+            text-align: center;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .payment-method:hover {
+            background-color: #f5f5f5;
+            border-color: #4CAF50;
+        }
+        .payment-method img {
+            width: 40px;
+            margin-bottom: 10px;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        #dana-gopay-selection {
+            display: none;
+            margin-top: 20px;
+        }
+        .form-group small {
+            display: block;
+            color: #777;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Formulir Pengiriman Produk</h1>
+
+        <div class="form-container">
+            <form action="pesan.html" method="POST">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="address">Alamat Pengiriman</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="phone">Nomor Telepon</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+        <form action="pesan new.html" method="post">
+           
+            <div class="payment-option">
+                <label for="payment-method">Pilih Metode Pembayaran:</label>
+                <select id="payment-method" name="payment-method">
+                    <option value="bank-transfer">Transfer Bank</option>
+                    <option value="dana">Dana</option>
+                    <option value="gopay">Gopay</option>
+                    <option value="cod">Cash on Delivery (COD)</option>
+                </select>
+            </div>
+
+            
+            <div id="bank-option" class="payment-details">
+                <label for="bank-name">Pilih Bank:</label>
+                <select value="bank-name" name="bank-name">
+                    <option value="bca">BCA 2819171917</option>
+                    <option value="mandiri">Mandiri 2789735628152</option>
+                    <option value="bri">BRI 0021574739</option>
+                    <option value="bni">BNI 0092527282</option>
+                </select>
+                </div>
+            
+            <div id="dana-option" class="payment-details">
+                <label for="dana-number">Pilih Nomor Dana:</label>
+                <select id="dana-number" name="dana-number">
+                    <option value="081234567890">081234567890 (Penjual A)</option>
+                    <option value="082345678901">082345678901 (Penjual B)</option>
+                    <option value="083456789012">083456789012 (Penjual C)</option>
+                </select>
+            </div>
+
+            
+            <div id="gopay-option" class="payment-details">
+                <label for="gopay-id">Pilih ID Gopay:</label>
+                <select id="gopay-id" name="gopay-id">
+                    <option value="gopay-12345">gopay-12345 (Penjual A)</option>
+                    <option value="gopay-67890">gopay-67890 (Penjual B)</option>
+                    <option value="gopay-54321">gopay-54321 (Penjual C)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="notes">Catatan Tambahan </label>
+                <textarea id="notes" name="notes" rows="3"></textarea>
+            </div>
+
+            
+            <div id="cod-option" class="payment-details">
+                <label for="cod-address">Alamat Pengiriman:</label>
+                <input type="text" id="cod-address" name="cod-address" placeholder="Masukkan Alamat Pengiriman" required>
+            </div>
+
+            <button onclick="window.location.href='pesan.html'" class="button">Pesan Sekarang</button>
+        </form>
+
+        <script>
+          
+            document.getElementById('payment-method').addEventListener('change', function () {
+                var selectedMethod = this.value;
+                
+                var paymentDetails = document.querySelectorAll('.payment-details');
+                paymentDetails.forEach(function (detail) {
+                    detail.style.display = 'none';
+                });
+               
+                if (selectedMethod === 'bank-transfer') {
+                    document.getElementById('bank-option').style.display = 'block';
+                } else if (selectedMethod === 'dana') {
+                    document.getElementById('dana-option').style.display = 'block';
+                } else if (selectedMethod === 'gopay') {
+                    document.getElementById('gopay-option').style.display = 'block';
+                } else if (selectedMethod === 'cod') {
+                    document.getElementById('cod-option').style.display = 'block';
+                }
+            });
+        </script>
+
+    </body>
+    </html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+       
+        #chart {
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .fa-arrow-left {
+            color: black; 
+            background: none;
+        }
+        
+        
+        .button, #clear-cart {
+            width: 100%;
+            height: 50px;
+            font-size: 16px;
+            padding: 10px;
+            background-color: #007bff; 
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .button:hover, #clear-cart:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+    <link rel="stylesheet" href="chart.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    
+    <link rel="icon" type="image/png" href="img/buku.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Keranjang</h1>
+        <div class="products">
+            <div class="product" data-name="Piattos" data-price="2000">
+                <h3>Piattos</h3>
+                <p>Harga: Rp2.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="Gery" data-price="2000">
+                <h3>Gery</h3>
+                <p>Harga: Rp2.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="Nabati" data-price="2000">
+                <h3>nabati</h3>
+                <p>Harga: Rp2.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="Good time" data-price="2000">
+                <h3>Good time</h3>
+                <p>Harga: Rp2.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="Chiki Balls" data-price="2000">
+                <h3>Chiki Balls</h3>
+                <p>Harga: Rp2.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="chitato" data-price="5000">
+                <h3>Jetz</h3>
+                <p>Harga: Rp5.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="Tango" data-price="2000">
+                <h3>Tango</h3>
+                <p>Harga: Rp2.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product" data-name="Garuda Rosta" data-price="2000">
+                <h3>Garuda rosta</h3>
+                <p>Harga: Rp2.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+        </div>
+        
+        <div class="cart">
+            <h2>Keranjang Belanja</h2>
+            <ul id="cart-items">
+               
+            </ul>
+            <p>Total: Rp <span id="total-price">0</span></p>
+            <button id="clear-cart">Kosongkan Keranjang</button>
+            <!-- <button onclick="window.location.href= class="button">Pesan</button> -->
+            <a href="pesan.html" class="button">Pesan Sekarang</a>
+
+        </div>
+        
+      
+        <div class="form-group">
+            <p class="key">Kode Otp Pesanan</p>
+            <div class="key-display" id="keyDisplay"></div>
+            
+            <button type="button" class="copy-btn" onclick="copyKey()">Salin Kunci</button>
+        </div>
+
+        <script src="chart.js"></script>
+        <script src="key.js"></script>
+        <button id="chart">
+            <a href="snak.html"><i class="fas fa-arrow-left fa-2x"></i></a>
+        </button>
+    </div>
+</body>
+</html>
